@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+    
+
+        <div class="container">
+            Currently Playing: <div class="inline" id="current-tone">--</div> <br>
+            Cycle Number: <div class="inline" id="cycle-number">0/0</div> <br>
+        </div>
+
+
+        <div class="container tone-area">
+            <div class="tone">
+                <form action="#">
+                    First Tone <br>
+                    <button id="small-one" tabindex="-1">Smaller</button>
+                    <input id="tone-one" type="number" value="440" min="0">Hz
+                    <button id="big-one" tabindex="-1">Bigger</button>
+                    <br>
+                    Volume: <input id="vol-one" type="number" min="0" max="100" value="50"> (0-100)
+                </form>
+            </div>
+            <div class="tone">
+                <form action="#">
+                    Second Tone <br>
+                    <button id="small-two" tabindex="-1">Smaller</button>
+                    <input id="tone-two" type="number" value="440" min="0">Hz
+                    <button id="big-two" tabindex="-1">Bigger</button>
+                    <br>
+                    Volume: <input id="vol-two" type="number" min="0" max="100" value="50"> (0-100)
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <form action="#">
+                Total Time: <input id="total-time" type="number" min="0" value="30"> Minutes<br>
+                Cycle Time:  <input id="cycle-time" type="number" min="0" value="30"> Seconds
+            </form>
+            <br>
+            <button tabindex="-1" id="start">Start</button> <button tabindex="-1" id="reset">Reset</button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
